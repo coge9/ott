@@ -1,0 +1,14 @@
+sudo: false
+language: java
+services:
+- docker
+cache:
+  directories:
+  - "$HOME/.cache"
+
+deploy:
+  provider: script
+  script: "cp .travis.settings.xml $HOME/.m2/settings.xml && mvn clean test -DProxyHost= -DProxyPort= -Denv=PR -DprNumber=2005 -Dbrand=telemundo -Dbrowser=chrome -DBrowser.Version= -Dgroups=chiller_publishing -Dapi_instances=DEV -Dplatform=mac -Dtestng.thread.count=10 -DEnvUser=tveqaautomation@gmail.com -DEnvPassword=aqa_404_NBCU -DRally.Userid=E  -DRally.Password=J.. -Dgrid.hub=206486983:16b83643-2a00-4265-9ac1-62b4a90efb64@ondemand.saucelabs.com -Dgrid.port=80"
+  skip_cleanup: true
+  on:
+    tags: false
