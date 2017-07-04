@@ -1,0 +1,158 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "description": "The unique identifier of the media-gallery."
+    },
+    "itemType": {
+      "type": "string",
+      "description": "The type of object.  In this case, a media-gallery."
+    },
+    "revision": {
+      "type": "number",
+      "description": "The revision number of the object.  This is used for version management."
+    },
+    "promoKicker": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "promoTitle": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "promoDescription": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "kicker": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Arbitrary kicker for editorial"
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the media-gallery."
+    },
+    "shortDescription": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The short description of the media-gallery."
+    },
+    "mediumDescription": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The medium description of the media-gallery."
+    },
+    "longDescription": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The long description of the media-gallery."
+    },
+    "categories": {
+      "type": "array" ,
+      "description": "A list of Categories taxonomyTerm UUIDs that is associated with this media-gallery test."
+    },
+    "tags": {
+      "type": "array",
+      "description": "A list of the Tags taxonomyTerm UUIDs that is associated with this media-gallery."
+    },
+    "coverImage": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The Uuid of the image object to be used as the cover image of the media-gallery."
+    },
+    "mediaGalleryItems": {
+      "type": "array",
+      "description": "A list of items that are in the media-gallery.  The items are grouped in an object that contains the UUID of the object, the itemType, the order number, and a caption."
+    },
+    "published": {
+      "type": "boolean",
+      "description": "A boolean field that identifies whether the series has been published."
+    },
+    "program": {
+      "type": "object",
+      "properties": {
+        "programUuid": {
+          "type": ["null",
+            "string"],
+          "description": "The UUID of the series or event associated to this image."
+        },
+        "programItemType": {
+          "type": "string",
+          "description": "The itemType of the program UUID provided.  It can be either series or event."
+        },
+        "seasonUuid": {
+          "type": ["null",
+            "string"],
+          "description": "The UUID of the season associated to this image."
+        },
+        "episodeUuid": {
+          "type": ["null",
+            "string"],
+          "description": "The UUID of the episode associated to this image."
+        }
+      },
+      "required": [
+        "programUuid",
+        "programItemType",
+        "seasonUuid",
+        "episodeUuid"
+      ],
+      "description": "This provides objects that contain the parentID (series or event), seasonsUuid or episodeUuid, which identifies the associations of this object."
+    },
+    "slug": {
+      "type": "string",
+      "description": "The machine-name \"slug\" of the post to use in its canonical URL."
+    },
+    "subhead": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The subheading of the series."
+    },
+    "datePublished": {
+      "type": "number",
+      "description": "The original airdate of the episode."
+    }
+  },
+  "required": [
+    "uuid",
+    "itemType",
+    "revision",
+    "title",
+    "shortDescription",
+    "mediumDescription",
+    "longDescription",
+    "categories",
+    "tags",
+    "mediaGalleryItems",
+    "published",
+    "program",
+    "subhead",
+    "slug",
+    "coverImage",
+    "datePublished",
+    "promoKicker",
+    "promoTitle",
+    "promoDescription"
+  ]
+}

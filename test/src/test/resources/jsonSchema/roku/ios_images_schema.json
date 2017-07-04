@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "description": "The unique identifier of the image."
+    },
+    "itemType": {
+      "type": "string",
+      "description": "The type of object.  In this case, a image."
+    },
+    "revision": {
+      "type": "number",
+      "description": "The revision number of the object.  This is used for version management."
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the image."
+    },
+    "href": {
+      "type": "String",
+      "description": "The image href of the object."
+    },
+    "imageStyle": {
+      "type": "array",
+      "description": "A list of the image styles for images",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type":{
+            "type": "string",
+            "description": "The type of image"
+          },
+          "href":{
+            "type": "string",
+            "description": "The href of image."
+          }
+        }
+      }
+    },
+      "caption": {
+      "type": "string",
+      "description": ""
+    },
+    "categories": {
+      "type": "array",
+      "description": "A list of Categories taxonomyTerm UUIDs that is associated with this image.",
+      "items": {
+        "type": "string",
+        "description": "Categories UUIDs that is associated with this image."
+      }
+    },
+    "tags": {
+      "type": "array",
+      "description": "A list of the Tags UUIDs that is associated with this image.",
+      "items": {
+        "type": "string",
+        "description": "Tags UUIDs that is associated with this image."
+      }},
+    "copyright": {
+      "type": "string",
+      "description": ""
+    },
+    "credit": {
+      "type": "string",
+      "description": ""
+    },
+    "description": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": ""
+    },
+    "highRes": {
+      "type": "boolean",
+      "description": ""
+    },
+    "source": {
+      "type": "string",
+      "description": ""
+    },
+    "published": {
+      "type": "boolean",
+      "description": ""
+    },
+    "required": [
+      "uuid",
+      "itemType",
+      "revision",
+      "itemType",
+      "alt",
+      "title",
+      "href",
+      "imageStyle",
+      "categories",
+      "tags",
+      "caption",
+      "copyright",
+      "credit",
+      "description",
+      "highRes",
+      "source"
+    ]
+  }
+}
+
+
+
+

@@ -1,0 +1,193 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" [<!ENTITY testConfiguration SYSTEM "https://dl.dropboxusercontent.com/u/15328464/testngParameterizedValueConfig.txt">]>
+<suite name="Test Suite CMS Test Cases" verbose="10" parallel="classes" thread-count="${testng.thread.count}" configfailurepolicy="continue">
+	<!--RUNTIME CONFIG -->
+    <parameter name="environment" value="${env}"/>
+    <parameter name="brand" value="${brand}"/>
+    <parameter name="os" value="${os}"/>
+    <parameter name="device" value="${device}"/>
+    <parameter name="Application Name" value="CMS"/>
+    <parameter name="Environment" value="${env}"/>
+    <parameter name="APP_VERSION" value="${groups}"/>
+    <parameter name="prNumber" value="${prNumber}"/>
+
+
+	<test name="NBC Automation Testing CMS">
+		<!-- ################################################################################################## -->
+		<!-- <method-selector>     <script language="beanshell">        <![CDATA[
+			String scope = System.getProperty("test.scope"); groups.containsKey(scope);
+			]]>    </script> </method-selector> -->
+		<!-- ################################################################################################## -->
+		<!-- Read the argument of test.scope from command line -->
+		<!-- <method-selectors>&testConfiguration;</method-selectors> -->
+		<!-- ################################################################################################## -->
+		<!-- Enter group name for specific test scripts -->
+
+<groups>
+            <define name="roku_page">
+                <include name="create_roku_page"/>
+                <include name="edit_roku_page"/>
+                <include name="roku_page"/>
+                <include name="shelf_manager"/>
+            </define>
+
+            <define name="roku_regression">
+                <include name="roku_page"/>
+                <include name="roku_publishing"/>
+                <include name="shelf_management"/>
+                <include name="header_burn_in"/>
+                <include name="feature_show_module"/>
+                <include name="master_config"/>
+                <include name="panelizer"/>
+                <include name="promo_ios"/>
+            </define>
+
+
+            <define name="life_with_no_failures">
+                <include name="roku_page"/>
+            </define>
+
+            <define name="chiller_regression">
+                <include name="cast"/>
+                <include name="categories"/>
+                <include name="externalLinks"/>
+                <include name="media_tab"/>
+                <include name="tags"/>
+                <include name="uuid"/>
+                <include name="roku_ingest_chiller"/>
+                <include name="chiller_image_styles"/>
+                <include name="collection_group"/>
+                <include name="curated_collection"/>
+                <include name="asset_library"/>
+                <include name="save_publish"/>
+                <include name="chiller_slug"/>
+                <include name="chiller_publishing"/>
+                <include name="content_type"/>
+            </define>
+
+            <define name="content_type">
+                <include name="chiller_video"/>
+                <include name="series"/>
+                <include name="season"/>
+                <include name="episode"/>
+                <include name="event"/>
+                <include name="role"/>
+                <include name="person"/>
+                <include name="madia_gallery"/>
+                <include name="post"/>
+                <include name="content_type"/>
+            </define>
+
+            <define name="chiller_publishing">
+                <include name="video_publishing"/>
+                <include name="series_publishing"/>
+                <include name="event_publishing"/>
+                <include name="collection_publishing"/>
+                <include name="castCredit_publishing"/>
+                <include name="image_publishing"/>
+                <include name="person_publishing"/>
+                <include name="role_publishing"/>
+                <include name="post_publishing"/>
+                <include name="episode_publishing"/>
+                <include name="taxonomy_term_publishing"/>
+                <include name="mediagallery_publishing"/>
+                <include name="season_publishing"/>
+            </define>
+
+            <define name="collection_regression">
+                <include name="collection_publishing"/>
+                <include name="collection_group"/>
+                <include name="curated_collection"/>
+            </define>
+
+			<define name="ios_regression">
+				<include name="ios_publishing"/>
+				<include name="promo_ios"/>
+				<include name="rule_publishing"/>
+				<include name="module_publishing"/>
+				<include name="page_publishing"/>
+				<include name="node_publishing"/>
+				<include name="video_publishing"/>
+			</define>
+
+            <define name="ios_publishing">
+                <include name="promo_publishing"/>
+                <include name="platform_publishing"/>
+            </define>
+
+            <define name="header_burn_in">
+                <include name="header_burn_in"/>
+                <include name="header_generation"/>
+            </define>
+
+            <define name="externalLinks">
+                <include name="externalLinks"/>
+            </define>
+
+            <define name="roku_publishing">
+                <include name="page_publishing"/>
+                <include name="rule_publishing"/>
+                <include name="roku_publishing"/>
+                <include name="list_publishing"/>
+                <include name="header_publish"/>
+                <include name="module_publishing"/>
+                <include name="node_publishing"/>
+                <include name="republishing"/>
+            </define>
+
+            <define name="shelf_management">
+                <include name="module_revision"/>
+                <include name="shelf_management"/>
+                <include name="feature_carousel_page"/>
+                <include name="dynamic"/>
+                <include name="panelizer_module"/>
+                <include name="max_count"/>
+                <include name="custom_shelf"/>
+                <include name="feature_carousel"/>
+                <include name="feature_show_module"/>
+            </define>
+
+            <define name="roku_module">
+                <include name="dynamic"/>
+                <include name="custom_shelf"/>
+                <include name="feature_carousel"/>
+                <include name="feature_show_module"/>
+            </define>
+
+            <define name="thumbnails">
+                <include name="program_android_thumbnails"/>
+                <include name="video_android_thumbnails"/>
+                <include name="program_thumbnails"/>
+                <include name="video_thumbnails"/>
+                <include name="chiller_image_styles"/>
+            </define>
+
+            <define name="jsonFormatValidation">
+                <include name="json_format_validation_V2_withFilter"/>
+                <include name="json_format_validation"/>
+                <include name="json_format_validation_V2"/>
+            </define>
+
+            <define name="migration">
+                <include name="user_migration_test"/>
+                <include name="role_migration_test"/>
+            </define>
+            <define name="shelf_managment">
+                <include name="shelf_managment"/>
+                <include name="shelf_management_admin"/>
+                <include name="shelf_management_editor"/>
+            </define>
+        </groups>
+
+
+		<!-- Add individual packages you wanted to execute below -->
+		<packages>
+			<package name="com.nbcuni.test.cms.tests.*" />
+		</packages>
+		<!-- Add individual classes you wanted to execute below -->
+		<classes>
+			<!-- <class name="com.nbcuni.test.cms.tests.content.series.TC13873_AddContentSeries_Test"/> -->
+		</classes>
+		<!-- TestCore Framework is handling all the listeners so there is no need
+			to specify it here -->
+	</test>
+</suite>

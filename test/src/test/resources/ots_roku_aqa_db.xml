@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+	<changeSet id="2" author="ad" context="ots_tve_aqa_db">
+
+ 		<!-- Tables -->
+		<createTable tableName="shelf">
+			<column name="Title" type="varchar(70)">
+				<constraints nullable="false" />
+			</column>
+			<column name="DisplayTitle" type="varchar(45)" defaultValue="1">
+				<constraints nullable="false" />
+			</column>
+			<column name="ShelfAlias" type="varchar(70)">
+				<constraints nullable="false" />
+			</column>
+			<column name="TitleVariant" type="varchar(45)" defaultValue="3 tiles">
+				<constraints nullable="false" />
+			</column>
+			<column name= "AssetsCount" type="varchar(45)" defaultValue="0">
+				<constraints nullable="false" />
+			</column>
+			<column name="Assets" type="varchar(45)" defaultValue="">
+				<constraints nullable="true" />
+			</column>
+			<column name="ShelfNodeId" type="varchar(200)" defaultValue="">
+				<constraints nullable="false" />
+            </column>
+		</createTable>
+
+		<createTable tableName="voidShelf">
+			<column name="Title" type="varchar(70)"></column>
+			<column name="ShelfAlias" type="varchar(70)"><constraints nullable="false" /></column>
+			<column name="Settings" type="varchar(200)" defaultValue=""><constraints nullable="false" /></column>
+		</createTable>
+
+		<!-- Inserts -->
+		<!-- Shelfs -->
+		<insert tableName="shelf"> <!--NUMBER 0 - Default Shelf -->
+			<column name="Title" value="AQA shelf ${id}" />
+			<column name="DisplayTitle" value="1"/>
+			<column name="ShelfAlias" value="AQA alias ${id}" />
+			<column name="TitleVariant" value="1 tile"/>
+			<column name="AssetsCount" value="1"/>
+			<column name="Assets" />
+			<column name="ShelfNodeId" value=""/>
+		</insert>
+		
+		<insert tableName="shelf"> <!--NUMBER 1 - Shelf with one asset -->
+			<column name="Title" value="AQA shelf ${id}" />
+			<column name="DisplayTitle" value="1"/>
+			<column name="ShelfAlias" value="AQA alias ${id}" />
+			<column name="TitleVariant" value="1 tile"/>
+			<column name="AssetsCount" value="1"/>
+			<column name="Assets"/>
+			<column name="ShelfNodeId" value=""/>
+		</insert>
+		
+		<insert tableName="shelf"> <!--NUMBER 2 - Shelf with three assets -->
+			<column name="Title" value="AQA shelf ${id}" />
+			<column name="DisplayTitle" value="1"/>
+			<column name="ShelfAlias" value="AQA alias ${id}" />
+			<column name="TitleVariant" value="1 tile"/>
+			<column name="AssetsCount" value="3"/>
+			<column name="Assets"/>
+			<column name="ShelfNodeId" value=""/>
+		</insert>
+		
+		<insert tableName="shelf"> <!--NUMBER 3 - Shelf different from default (for edit shelf) -->
+			<column name="Title" value="AQA shelf ${id}" />
+			<column name="DisplayTitle" value="0"/>
+			<column name="ShelfAlias" value="AQA alias ${id}" />
+			<column name="TitleVariant" value="3 tiles"/>
+			<column name="AssetsCount" value="0"/>
+			<column name="Assets" />
+			<column name="ShelfNodeId" value=""/>
+		</insert>
+		
+		<insert tableName="shelf">  <!--NUMBER 4 - Shelf with long title -->
+			<column name="Title" value="AQA shelf with long name zzzZZZZzzz ${id}" />
+			<column name="DisplayTitle" value="0"/>
+			<column name="ShelfAlias" value="AQA alias ${id}" />
+			<column name="TitleVariant" value="3 tiles"/>
+			<column name="AssetsCount" value="1"/>
+			<column name="Assets" />
+			<column name="ShelfNodeId" value="Settings"/>
+		</insert>
+		
+		<insert tableName="shelf">  <!--NUMBER 5 - Shelf with long title -->
+			<column name="Title" value="Kostya massive shelf dont delete ${id}" />
+			<column name="DisplayTitle" value="0"/>
+			<column name="ShelfAlias" value="Kostya massive shelf dont delete ${id}" />
+			<column name="TitleVariant" value="3 tiles"/>
+			<column name="AssetsCount" value="40"/>
+			<column name="Assets" />
+			<column name="ShelfNodeId" value="Settings"/>
+		</insert>
+
+		<insert tableName="shelf"> <!--NUMBER 5 - Shelf with three assets -->
+			<column name="Title" value="AQA shelf ${id}" />
+			<column name="DisplayTitle" value="1"/>
+			<column name="ShelfAlias" value="AQA alias ${id}" />
+			<column name="TitleVariant" value="1 tile"/>
+			<column name="AssetsCount" value="100"/>
+			<column name="Assets"/>
+			<column name="ShelfNodeId" value=""/>
+		</insert>
+
+		<!-- Void shelfs -->
+		<insert tableName="voidShelf">  <!-- NUMBER 0 - Standart shelf with -->
+			<column name="Title" value="AQA void shelf ${id}" />
+			<column name="ShelfAlias" value="AQA void alias ${id}" />
+			<column name="Settings" value="{&quot;name&quot;:&quot;blabla&quot;}"/>
+		</insert>
+		
+		<insert tableName="voidShelf">  <!-- NUMBER 1 - Standart shelf with different values -->
+			<column name="Title" value="AQA other void shelf ${id}" />
+			<column name="ShelfAlias" value="AQA other void alias ${id}" />
+			<column name="Settings" value="{}"/>
+		</insert>
+		
+		
+
+	</changeSet>
+</databaseChangeLog>

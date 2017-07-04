@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "description": "The unique identifier of the role."
+    },
+    "itemType": {
+      "type": "string",
+      "description": "The type of object.  In this case, a role."
+    },
+    "revision": {
+      "type": "number",
+      "description": "The revision number of the object.  This is used for version management."
+    },
+    "prefix": {
+      "type": "string",
+      "description": "Prefix of the role (Mr., Mrs., etc.)"
+    },
+    "firstName": {
+      "type": "string",
+      "description": "First name of the character role."
+    },
+    "middleName": {
+      "type": "string",
+      "description": "Middle name of the character role."
+    },
+    "lastName": {
+      "type": "string",
+      "description": "Last name of the character role."
+    },
+    "suffix": {
+      "type": "string",
+      "description": "Suffix of the character role."
+    },
+    "bio": {
+      "type": "string",
+      "description": "Biography of the character role."
+    },
+    "slug": {
+      "type": "string",
+      "description": "The machine-name \"slug\" of the role to use in its canonical URL."
+    },
+    "images": {
+      "type": "array",
+      "description": "A list of uuids of the image object associated to this role."
+    },
+    "published": {
+      "type": "boolean"
+    },
+    "links": {
+      "type": "array",
+      "description": "A List of objects containing URL and text title of link associated to the role."
+    }
+  },
+  "required": [
+    "uuid",
+    "itemType",
+    "revision",
+    "prefix",
+    "firstName",
+    "middleName",
+    "lastName",
+    "suffix",
+    "bio",
+    "images",
+    "published",
+    "slug",
+    "links"
+  ]
+}

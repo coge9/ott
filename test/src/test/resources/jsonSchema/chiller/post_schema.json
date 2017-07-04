@@ -1,0 +1,145 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "description": "The unique identifier of the event."
+    },
+    "itemType": {
+      "type": "string",
+      "description": "The type of object.  In this case, an event."
+    },
+    "revision": {
+      "type": "number",
+      "description": "The revision number of the object.  This is used for version management."
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the post."
+    },
+    "slug": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The machine-name \"slug\" of the post to use in its canonical URL."
+    },
+    "byLine": {
+      "type": "string",
+      "description": "The byLine of the post."
+    },
+    "shortDescription": {
+      "type": "string",
+      "description": "The short description of the post."
+    },
+    "mediumDescription": {
+      "type": "string",
+      "description": "The medium description of the post."
+    },
+    "longDescription": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The long desciption of the post."
+    },
+    "media": {
+      "type": "array",
+      "description": "A list of media objects associated to the series (can be images or videos)."
+    },
+    "promoKicker": {
+      "type": "string",
+      "description": "The promoKicker of the post."
+    },
+    "promoTitle": {
+      "type": "string",
+      "description": "The promotitle of the post."
+    },
+    "promoDescription": {
+      "type": "string",
+      "description": "The promoDescription of the post."
+    },
+    "tags": {
+      "type": "array",
+      "description": "A list of media objects associated to the series (can be images or videos)."
+    },
+    "categories": {
+      "type": "array",
+      "description": "A list of Categories taxonomyTerm UUIDs that is associated with this event."
+    },
+    "author": {
+      "type": "array",
+      "description": "A list of Categories taxonomyTerm UUIDs that is associated with this event."
+    },
+    "program": {
+      "type": "object",
+      "properties": {
+        "programUuid": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "programItemType": {
+          "type": "string"
+        },
+        "seasonUuid": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "episodeUuid": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "required": [
+        "programUuid",
+        "programItemType",
+        "seasonUuid",
+        "episodeUuid"
+      ],
+      "description": "The series or event that is the parent program of this season."
+    },
+    "blurb": {
+      "type": "array",
+      "description": "A list of Categories taxonomyTerm UUIDs that is associated with this event."
+    },
+    "published": {
+      "type": "boolean",
+      "description": "A boolean field that identifies whether the event has been published."
+    },
+    "availableDate": {
+      "type": "number",
+      "description": "The revision number of the object.  This is used for version management."
+    },
+    "datePublished": {
+      "type": "number",
+      "description": "The revision number of the object.  This is used for version management."
+    }
+  },
+  "required": [
+    "uuid",
+    "itemType",
+    "revision",
+    "title",
+    "slug",
+    "byLine",
+    "shortDescription",
+    "mediumDescription",
+    "longDescription",
+    "media",
+    "categories",
+    "tags",
+    "published",
+    "promoKicker",
+    "promoTitle",
+    "promoDescription",
+    "availableDate",
+    "datePublished"
+  ]
+}

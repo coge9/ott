@@ -1,0 +1,78 @@
+<suite name="CMS D7 MXP Integration Suite">
+
+    <!--RUNTIME CONFIG -->
+    <parameter name="environment" value="${env}"/>
+    <parameter name="brand" value="${brand}"/>
+    <parameter name="prNumber" value="${prNumber}" />
+
+    <!--TEST EXECUTION QUEUE -->
+    <test verbose="1" name="MPX Ingest and MPX Content update tests for CMS" preserve-order="true">
+
+        <classes>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.serialApi.images.TC16727_PublishProgram3tileSourceToConcertoManually"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.serialApi.images.TC16729_PublishProgram3tileSourceToConcertoMpxUpdater"/>"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.serialApi.images.TC16730_PublishProgram3tileSourceToConcertoCronIngest"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.concertoApi.program.TC15159_CheckProgramPublishingAfterCronRunning"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.concertoApi.program.TC15160_CheckProgramAutoPublishingWithMpxUpdater"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.concertoApi.program.TC15161_CheckManualProgramPublishing"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.concertoApi.program.TC15162_ValidatePublishSchemeForImagesOnIOS"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.concertoApi.program.TC15163_PublishImageManually"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.concertoApi.program.TC15164_PublishImageByCronIngest"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.concertoApi.program.TC15165_PublishImageByMPXUpdater"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.concertoApi.program.TC15166_ValidatePublishSchemeForImagesOnIOSAfterSetMPX"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.concertoApi.program.TC15265_ValidateProgramSchemeAfterManualPublishing"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.concertoApi.program.TC15266_ValidateProgramSchemeAfterReingest"/>
+            <class name="com.nbcuni.test.cms.test.backend.tvecms.publishing.concertoApi.program.TC15309_CheckProgramMessageAttributes"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.concertoApi.video.TC15396_PublishVideoByMpxUpdater"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.concertoApi.video.TC15397_PublishIngestedVideo"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.concertoApi.video.TC15400_CheckVideoMessageAttributes"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.serialApi.video.TC10146_AutomaticPublisingAfterIngestNewVideoNode"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.serialApi.video.TC10147_AutomaticPublisingAfterIngestVideoNodeUpdates"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.publishing.serialApi.video.TC10213_PublishingUpdatedOTTVideo"/>
+
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.mpx.TC10382_CheckPOSTOfProgramAndProgramByIngest"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.mpx.TC9590_Roku_MPXIngest_OTTProgramIngest"/>
+           <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.mpx.TC10382_CheckPOSTVideoByIngest"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.mpx.TC9589_Roku_MPXIngest_OTTVideoIngest"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.mpx.TC9590_Roku_MPXIngest_OTTProgramIngest"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.mpx.TC9592_Roku_ContentUpdate_OTTProgramIngest"/>
+            <class
+                    name="com.nbcuni.test.cms.test.backend.tvecms.mpx.TC9570_MPXIngest_MPXContentIngest"/>
+
+        </classes>
+    </test>
+
+    <!--LISTENERS -->
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+        <listener class-name="com.nbcuni.test.cms.utils.logging.listeners.AppVersionSetListener" />
+        <listener class-name="com.nbcuni.test.cms.utils.logging.listeners.TestRunProgressListener" />
+        <listener class-name="com.nbcuni.test.cms.utils.logging.listeners.TimeMeasurmentListener" />
+    </listeners>
+</suite>

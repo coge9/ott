@@ -1,0 +1,140 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "description": "A unique identifier"
+    },
+    "slug": {
+      "type": "string",
+      "description": "The machine-name \"slug\" of the post to use in its canonical URL."
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the item."
+    },
+    "promoKicker": {
+      "type": "string"
+    },
+    "promoTitle": {
+      "type": "string"
+    },
+    "promoDescription": {
+      "type": "string"
+    },
+    "itemType": {
+      "type": "string",
+      "description": "The type of object.  In this case, an promo."
+    },
+    "revision": {
+      "type": "integer"
+    },
+    "published": {
+      "type": "boolean",
+      "description": "A boolean field that identifies whether the promo has been published."
+    },
+    "program": {
+      "type": "object",
+      "properties": {
+        "programUuid": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "The UUID of the series or event associated to this image."
+        },
+        "programItemType": {
+          "type": "string",
+          "description": "The itemType of the program UUID provided.  It can be either series or event."
+        },
+        "seasonUuid": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "The UUID of the season associated to this image."
+        },
+        "episodeUuid": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "The UUID of the episode associated to this image."
+        }
+      },
+      "required": [
+        "programUuid",
+        "programItemType",
+        "seasonUuid",
+        "episodeUuid"
+      ],
+      "description": "This provides objects that contain the parentID (series or event), seasonsUuid or episodeUuid, which identifies the associations of this object."
+    },
+    "categories": {
+      "type": "array",
+      "description": "A list of Categories taxonomyTerm UUIDs that is associated with this media-gallery."
+    },
+    "tags": {
+      "type": "array",
+      "description": "A list of the Tags taxonomyTerm UUIDs that is associated with this media-gallery."
+    },
+    "media": {
+      "type": "array",
+      "description": "A list of media objects associated to the promos (can be images or videos)."
+    },
+    "links": {
+      "type": "array",
+      "description": "A List of AT LEAST ONE object containing URL, usage, if content and text title of link associated to the promo.",
+      "items" : {
+        "type": "object",
+        "properties": {
+          "text":{
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "uuid":{
+            "type": "string"
+          },
+          "href":{
+            "type": "string"
+          },
+          "content":{
+            "type": "string"
+          },
+          "itemType":{
+            "type": "string"
+          },
+          "usage":{
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "required": [
+          "text",
+          "content",
+          "usage"
+        ]
+      }
+    }
+  },
+  "required": [
+    "uuid",
+    "slug",
+    "title",
+    "itemType",
+    "published",
+    "program",
+    "categories",
+    "tags",
+    "media",
+    "links",
+    "promoKicker",
+    "promoTitle",
+    "promoDescription"
+  ]
+}

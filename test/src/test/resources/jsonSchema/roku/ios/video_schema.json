@@ -1,0 +1,312 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "description": "The unique identifier of the video."
+    },
+    "slug": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The machine-name \"slug\" of the video to use in its canonical URL."
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the videyposo."
+    },
+    "itemType": {
+      "type": "string",
+      "description": "The type of object.  In this case, a video."
+    },
+    "revision": {
+      "type": "number",
+      "description": "The revision number of the object.  This is used for version management."
+    },
+    "mdsuuid": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The uuid from mds that references the video asset."
+    },
+    "published": {
+      "type": "boolean"
+    },
+    "fullEpisode": {
+      "type": "boolean"
+    },
+    "program": {
+      "type": "object",
+      "properties": {
+        "programUuid": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "The UUID of the series or event associated to this image."
+        },
+        "programItemType": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "The itemType of the program UUID provided.  It can be either series or event."
+        },
+        "seasonUuid": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "The UUID of the season associated to this image."
+        },
+        "episodeUuid": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "The UUID of the episode associated to this image."
+        }
+      },
+      "required": [
+        "programUuid",
+        "programItemType",
+        "seasonUuid",
+        "episodeUuid"
+      ],
+      "description": "This provides objects that contain the parentID (series or event), seasonsUuid or episodeUuid, which identifies the associations of this object."
+    },
+    "promoKicker": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "promoTitle": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "promoDescription": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "mpxMetadata": {
+      "type": "object",
+      "properties": {
+        "tmsId": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "mpxId": {
+          "type": [
+            "string"
+          ]
+        },
+        "mediaPid": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "mpxGuid": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "showId": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "The unique showId of the list."
+        },
+        "airDate": {
+          "type": "number",
+          "description": "Unix timestamp to the millisecond"
+        },
+        "availableDate": {
+          "type": "number",
+          "description": "Unix timestamp to the millisecond"
+        },
+        "expirationDate": {
+          "type": "number",
+          "description": "Unix timestamp to millisecond; duplication for video.expirationDate INTENTIONAL"
+        },
+        "dayPart": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "externalAdvertiserid": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "entitlement": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "keywords": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "description": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "shortDescription": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "programmingType": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "closedCaptioning": {
+          "type": "boolean"
+        },
+        "seriesName": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "seriesType": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "seriesCategory": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "advertisingGenre": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "seasonNumber": {
+          "type": [
+            "null",
+            "number"
+
+          ]
+        },
+        "episodeNumber": {
+          "type": [
+            "null",
+            "number"
+
+          ]
+        },
+        "duration": {
+          "type": "number"
+        },
+        "ratings": {
+          "type": "array",
+          "description": "A List of ratings objects"
+        },
+        "mediaCategories": {
+          "type": "array",
+          "description": "A list of categories"
+        }
+      },
+      "required": [
+        "tmsId",
+        "mpxId",
+        "mediaPid",
+        "mpxGuid",
+        "showId",
+        "airDate",
+        "availableDate",
+        "expirationDate",
+        "dayPart",
+        "ratings",
+        "externalAdvertiserid",
+        "entitlement",
+        "keywords",
+        "description",
+        "shortDescription",
+        "programmingType",
+        "closedCaptioning",
+        "seriesName",
+        "seriesType",
+        "seriesCategory",
+        "advertisingGenre",
+        "seasonNumber",
+        "episodeNumber",
+        "duration",
+        "mediaCategories"
+      ]
+    },
+    "images": {
+      "type": "array",
+      "description": "A list of media objects (images) associated to the video.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uuid":{
+            "type": "string"
+          },
+          "itemType":{
+            "type": "string"
+          },
+          "usage":{
+            "type": "string"
+          }
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "description": "A list of Categories taxonomyTerm UUIDs that is associated with this video."
+    },
+    "tags": {
+      "type": "array",
+      "description": "A list of the Tags taxonomyTerm UUIDs that is associated with this video."
+    }
+  },
+  "required": [
+    "uuid",
+    "title",
+    "itemType",
+    "slug",
+    "revision",
+    "mdsuuid",
+    "published",
+    "fullEpisode",
+    "program",
+    "images",
+    "categories",
+    "tags",
+    "mpxMetadata",
+    "promoKicker",
+    "promoTitle",
+    "promoDescription"
+  ]
+}

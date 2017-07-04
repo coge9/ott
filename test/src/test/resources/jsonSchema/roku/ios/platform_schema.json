@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "description": "The unique identifier of the header."
+    },
+    "itemType": {
+      "type": "string",
+      "description": "The type of object.,"
+    },
+    "revision": {
+      "type": "number",
+      "description": "The revision number of the object.  This is used for version management."
+    },
+    "appId": {
+      "type": "string",
+      "description": "Details the brand and app of the header"
+    },
+    "defaultHomepageCollection": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "homepage list UUID,"
+    },
+    "defaultSeriesPageCollection": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "all show list UUID,"
+    },
+    "settings": {
+      "type": "object",
+      "properties": {},
+      "description": "This provide an objects that contains arbitrary data needed by an app"
+    }
+  },
+  "required": [
+    "uuid",
+    "itemType",
+    "revision",
+    "appId",
+    "defaultHomepageCollection",
+    "defaultSeriesPageCollection",
+    "settings"
+  ]
+}

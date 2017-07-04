@@ -1,0 +1,176 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "description": "The unique identifier of the event."
+    },
+    "itemType": {
+      "type": "string",
+      "description": "The type of object.  In this case, an event."
+    },
+    "revision": {
+      "type": "number",
+      "description": "The revision number of the object.  This is used for version management."
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the event."
+    },
+    "slug": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The machine-name \"slug\" of the event to use in its canonical URL."
+    },
+    "subhead": {
+      "type": "string",
+      "description": "The subheading of the event."
+    },
+    "shortDescription": {
+      "type": "string",
+      "description": "The short description of the event."
+    },
+    "mediumDescription": {
+      "type": "string",
+      "description": "The medium description of the event."
+    },
+    "longDescription": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The long desciption of the event."
+    },
+    "media": {
+      "type": "array",
+      "description": "A list of media objects associated to the series (can be images or videos)."
+    },
+    "categories": {
+      "type": "array",
+      "description": "A list of Categories taxonomyTerm UUIDs that is associated with this event."
+    },
+    "tags": {
+      "type": "array",
+      "description": "A list of the Tags taxonomyTerm UUIDs that is associated with this event."
+    },
+    "published": {
+      "type": "boolean",
+      "description": "A boolean field that identifies whether the event has been published."
+    },
+    "links": {
+      "type": "array",
+      "description": "A List of objects containing URL and text title of link associated to the event."
+    },
+    "genre": {
+      "type": "array",
+      "description": "A list of genre that is associated with this event."
+    },
+    "contentRating": {
+      "type": "string",
+      "description": "The content rating of this event."
+    },
+    "unscripted": {
+      "type": "boolean",
+      "description": "A boolean field that identifies whether the event is unscripted."
+    },
+    "syndicated": {
+      "type": "boolean",
+      "description": "A boolean field that identifies whether the event is syndicated."
+    },
+    "airTimes": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The airtimes for this event."
+    },
+    "channelOriginal": {
+      "type": "boolean",
+      "description": "A boolean field that identifies whether this event is a channel original."
+    },
+    "eventType": {
+      "type": "string",
+      "description": "This identifies the event type of the event.  It can be Movie, Live Event, Web Event, Special, Holiday Special, or Prequel."
+    },
+    "programStatus": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "This identifies the status of the event.  It can be Upcoming, In-seasons, Off-Season, Archived, Current, or Classic."
+    },
+    "releaseYear": {
+      "type": "number",
+      "description": "This identifies the year the event was released."
+    },
+    "relatedSeries": {
+      "type": "array",
+      "description": "A list UUIDs of series related to this event."
+    },
+    "castCredit": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The Uuid of the cast associated with this object."
+    },
+    "collection": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The Unique identifier of events collection."
+    },
+    "promoKicker": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "promoTitle": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "promoDescription": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "itemType",
+    "revision",
+    "title",
+    "slug",
+    "subhead",
+    "shortDescription",
+    "mediumDescription",
+    "longDescription",
+    "media",
+    "categories",
+    "tags",
+    "published",
+    "links",
+    "genre",
+    "contentRating",
+    "unscripted",
+    "syndicated",
+    "airTimes",
+    "channelOriginal",
+    "eventType",
+    "programStatus",
+    "releaseYear",
+    "relatedSeries",
+    "castCredit",
+    "promoKicker",
+    "promoTitle",
+    "promoDescription"
+  ]
+}

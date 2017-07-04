@@ -1,0 +1,58 @@
+{
+    "type": "object",
+    "properties": {
+        "pageId": {
+            "type": "string"
+        },
+        "appId": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "alias": {
+            "type": "string"
+        },
+        "modules": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        },
+                        "moduleType": {
+                        }
+                    }
+                }
+            ]
+        },
+        "pages": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "object"
+                }
+            ]
+        },
+        "meta": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "object"
+                }
+            ]
+        },
+        "description": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "pageId",
+        "appId",
+        "name",
+        "alias",
+        "modules"
+    ]
+}

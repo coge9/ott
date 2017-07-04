@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "description": "The unique identifier of the collection type."
+    },
+    "slug": {
+      "type": "string",
+      "description": "The machine-name \"slug\" of the collection type to use in its canonical URL."
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the collection type."
+    },
+    "itemType": {
+      "type": "string",
+      "description": "The type of object.  In this case, a collection/collection group."
+    },
+    "revision": {
+      "type": "number",
+      "description": "The revision number of the object.  This is used for version management."
+    },
+    "shortDescription": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The short description of the collection type."
+    },
+    "mediumDescription": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The medium description of the collection type."
+    },
+    "longDescription": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The long desciption of the collection type."
+    },
+    "tileType": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "description": "Tile Type value"
+    },
+    "categories": {
+      "type": "array",
+      "description": "A list of Categories taxonomyTerm UUIDs that is associated with this collection type.",
+      "items": {
+        "type": "string",
+        "description": "Categories UUIDs that is associated with this collection type."
+      }}
+    },
+    "tags": {
+      "type": "array",
+      "description": "A list of the Tags UUIDs that is associated with this collection type.",
+      "items": {
+        "type": "string",
+        "description": "Tags UUIDs that is associated with this collection type."
+      }},
+  "listItems": {
+    "type": "array",
+    "description": "A list of the added itemsto the collection type.",
+    "required": true,
+    "items": {
+      "type": "object",
+      "properties": {
+        "uuid":{
+          "type": "string",
+          "description": "The unique identifier of the added item."
+        },
+        "itemType":{
+          "type": "string",
+          "description": "The type of object."
+        }
+      }
+    }
+  },
+  "program": {
+    "type": "object",
+    "required": true,
+    "properties": {
+      "programUuid": {
+        "type": [
+          "null",
+          "string"
+        ],
+        "description": "The UUID of the series or event associated to this image."
+      },
+      "programItemType": {
+        "type": "string",
+        "description": "The itemType of the program UUID provided.  It can be either series or event."
+      },
+      "seasonUuid": {
+        "type": [
+          "null",
+          "string"
+        ],
+        "description": "The UUID of the season associated to this image."
+      },
+      "episodeUuid": {
+        "type": [
+          "null",
+          "string"
+        ],
+        "description": "The UUID of the episode associated to this image."
+      }
+    }
+  },
+  "required": [
+    "uuid",
+    "slug",
+    "title",
+    "itemType",
+    "revision",
+    "shortDescription",
+    "mediumDescription",
+    "longDescription",
+    "categories",
+    "tags",
+    "listItems",
+    "program",
+    "tileType"
+  ]
+}
+
+
+
+

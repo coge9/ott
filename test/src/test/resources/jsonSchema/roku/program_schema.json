@@ -1,0 +1,81 @@
+{
+  "type": "object",
+  "properties": {
+
+    "itemType": {
+      "type": "string"
+    },
+    "posterurl": {
+      "type": "string"
+    },
+    "seriesType": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "seriesCategory": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "showColor": {
+      "type": "string"
+    },
+    "images": {
+      "type": "array",
+      "description": "A list of the image styles for images",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name":{
+            "type": "string"
+          },
+          "imageUrl":{
+            "type": "string"
+          },
+          "width":{
+            "type": "integer"
+          },
+          "height":{
+            "type": "integer"
+          },
+          "update":{
+            "type": "boolean"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"}
+          }
+        }
+      }
+    },
+    "id": {
+      "type": "string"
+    },
+    "mpxId": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": [
+
+    "itemType",
+    "posterurl",
+    "seriesType",
+    "seriesCategory",
+    "showColor",
+    "images",
+    "id",
+    "mpxId",
+    "title",
+    "description"
+  ]
+}

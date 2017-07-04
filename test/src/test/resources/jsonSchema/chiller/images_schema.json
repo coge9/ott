@@ -1,0 +1,124 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "description": "The unique identifier of the image."
+    },
+    "itemType": {
+      "type": "string",
+      "description": "The type of object.  In this case, a image."
+    },
+    "revision": {
+      "type": "number",
+      "description": "The revision number of the object.  This is used for version management."
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the image."
+    },
+    "href": {
+      "type": "string",
+      "description": "The url to the image asset."
+    },
+    "imageStyle": {
+      "type": "array",
+      "description": "A list of the image styles for images",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type":{
+            "type": "string",
+            "description": "The type of image"
+          },
+          "href":{
+            "type": "string",
+            "description": "The href of image."
+          }
+        }
+      }
+    },
+    "alt": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The alternate label of this image."
+    },
+    "caption": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The default caption of the image."
+    },
+    "categories": {
+      "type": "array",
+      "description": "A list of Categories taxonomyTerm UUIDs that is associated with this image."
+    },
+    "tags": {
+      "type": "array",
+      "description": "A list of the Tags taxonomyTerm UUIDs that is associated with this image."
+    },
+    "copyright": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The copyright of the image."
+    },
+    "credit": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "This identifies the credit given to this image."
+    },
+    "description": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "A description of the image."
+    },
+    "highRes": {
+      "type": "boolean",
+      "description": "A boolean field that identifies whether this image is a high resolution image."
+    },
+    "source": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "This identifies the source of this image."
+    },
+    "published": {
+      "type": "boolean",
+      "description": "A boolean field that identifies whether this image has been published."
+    },
+    "programs": {
+      "type": "array",
+      "description": "A list of PROGRAM objects that contain the type and url to the image asset for the different styles of this image."
+    }
+  },
+  "required": [
+    "uuid",
+    "itemType",
+    "revision",
+    "title",
+    "href",
+    "imageStyle",
+    "alt",
+    "caption",
+    "categories",
+    "tags",
+    "copyright",
+    "credit",
+    "description",
+    "highRes",
+    "source",
+    "published",
+    "programs"
+  ]
+}

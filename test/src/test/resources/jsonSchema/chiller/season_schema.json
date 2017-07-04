@@ -1,0 +1,135 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "description": "The unique identifier of the season."
+    },
+    "itemType": {
+      "type": "string",
+      "description": "The type of object.  In this case, a season."
+    },
+    "revision": {
+      "type": "number",
+      "description": "The revision number of the object.  This is used for version management."
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the season."
+    },
+    "subhead": {
+      "type": "string",
+      "description": "The subheading of the season."
+    },
+    "shortDescription": {
+      "type": "string",
+      "description": "The short description of the season."
+    },
+    "mediumDescription": {
+      "type": "string",
+      "description": "The medium description of the season."
+    },
+    "longDescription": {
+      "type": "string",
+      "description": "The long desciption of the season."
+    },
+    "media": {
+      "type": "array",
+      "description": "A list of media objects associated to the series (can be images or videos)."
+    },
+    "categories": {
+      "type": "array",
+      "description": "A list of Categories taxonomyTerm UUIDs that is associated with this season."
+    },
+    "tags": {
+      "type": "array",
+      "description": "A list of the Tags taxonomyTerm UUIDs that is associated with this season."
+    },
+    "published": {
+      "type": "boolean",
+      "description": "A boolean field that identifies whether the season has been published."
+    },
+    "links": {
+      "type": "array",
+      "description": "A List of objects containing URL and text title of link associated to the season."
+    },
+    "productionNumber": {
+      "type": "number",
+      "description": "The production number of the season."
+    },
+    "seasonNumber": {
+      "type": "number",
+      "description": "The season number of this season. This can be used to sort the order of the season by season number."
+    },
+    "seasonStartDate": {
+      "type": "number",
+      "description": "The start date of the season."
+    },
+    "seasonEndDate": {
+      "type": "number",
+      "description": "The end date of the season."
+    },
+    "slug": {
+      "type": "string",
+      "description": "The machine-name \"slug\" of the post to use in its canonical URL."
+    },
+    "program": {
+      "type": "object",
+      "properties": {
+        "programUuid": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "programItemType": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "programUuid",
+        "programItemType"
+      ],
+      "description": "The series or event that is the parent program of this season."
+    },
+    "castCredit": {
+      "type": "string",
+      "description": "The Uuid of the cast associated with this object."
+    },
+    "promoKicker": {
+      "type": "string"
+    },
+    "promoTitle": {
+      "type": "string"
+    },
+    "promoDescription": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "uuid",
+    "itemType",
+    "revision",
+    "title",
+    "slug",
+    "subhead",
+    "shortDescription",
+    "mediumDescription",
+    "longDescription",
+    "media",
+    "categories",
+    "tags",
+    "published",
+    "links",
+    "productionNumber",
+    "seasonNumber",
+    "seasonStartDate",
+    "seasonEndDate",
+    "program",
+    "castCredit",
+    "promoKicker",
+    "promoTitle",
+    "promoDescription"
+  ]
+}

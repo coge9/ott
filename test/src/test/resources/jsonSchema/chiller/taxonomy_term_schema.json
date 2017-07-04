@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "description": "The unique identifier of the taxonomyTerm."
+    },
+    "itemType": {
+      "type": "string",
+      "description": "The type of object.  In this case, a taxonomyTerm."
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the taxonomyTerm."
+    },
+    "revision": {
+      "type": "number",
+      "description": "The revision number of the object.  This is used for version management."
+    },
+    "vocabularyType": {
+      "type": "string",
+      "description": "The name of the vocabulary that is the parent of this taxonomy term object.  This can be categories or tags."
+    },
+    "parentUuids": {
+      "type": "array",
+      "description": "A list of UUID of other taxonomyTerms that are parents to this taxonomyTerm."
+    },
+    "description": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The description of the taxonomyTerm."
+    },
+    "weight": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "description": "The weight of the taxonomyTerm.  This is used to determine the weight between the taxonomy terms in the same group."
+    }
+  },
+  "required": [
+    "uuid",
+    "itemType",
+    "title",
+    "revision",
+    "vocabularyType",
+    "parentUuids",
+    "description",
+    "weight"
+  ]
+}

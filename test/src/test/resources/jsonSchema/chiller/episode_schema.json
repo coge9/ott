@@ -1,0 +1,202 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The unique identifier of the episode."
+    },
+    "itemType": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The type of object.  In this case, an episode."
+    },
+    "revision": {
+      "type": "number",
+      "description": "The revision number of the object.  This is used for version management."
+    },
+    "title": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The title of the episode."
+    },
+    "slug": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The machine-name \"slug\" of the episode to use in its canonical URL."
+    },
+    "subhead": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The subheading of the episode."
+    },
+    "shortDescription": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The short description of the episode."
+    },
+    "mediumDescription": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The medium description of the episode."
+    },
+    "longDescription": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The long desciption of the episode."
+    },
+    "media": {
+      "type": "array",
+      "description": "A list of media objects associated to the series (can be images or videos)."
+    },
+    "categories": {
+      "type": "array",
+      "description": "A list of Categories taxonomyTerm UUIDs that is associated with this episode."
+    },
+    "tags": {
+      "type": "array",
+      "description": "A list of the Tags taxonomyTerm UUIDs that is associated with this episode."
+    },
+    "published": {
+      "type": "boolean",
+      "description": "A boolean field that identifies whether the episode has been published."
+    },
+    "links": {
+      "type": "array",
+      "description": "A List of objects containing URL and text title of link associated to the episode."
+    },
+    "contentRating": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The content rating of the episode."
+    },
+    "episodeNumber": {
+      "type": "number",
+      "description": "The episode number of this episode.  This can be used to sort the episodes by the episode number."
+    },
+    "episodeType": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "This identifies whether the episode is a TV episode or a Webisode."
+    },
+    "datePublished": {
+      "type": "number",
+      "description": "The original airdate of the episode."
+    },
+    "secondaryEpisodeNumber": {
+      "type": "number",
+      "description": "The secondardy episode number."
+    },
+    "supplementaryAiring": {
+      "type": "number",
+      "description": "The supplemental airing date."
+    },
+    "productionNumber": {
+      "type": "number",
+      "description": "The production number of the episode."
+    },
+    "program": {
+      "type": "object",
+      "properties": {
+        "programUuid": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "programItemType": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "seasonUuid": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "required": [
+        "programUuid",
+        "programItemType",
+        "seasonUuid"
+      ],
+      "description": "The series or event that is the parent program of this episode."
+    },
+    "castCredit": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The Uuid of the cast associated with this object."
+    },
+    "promoKicker": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "promoTitle": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "promoDescription": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "itemType",
+    "revision",
+    "title",
+    "subhead",
+    "slug",
+    "shortDescription",
+    "mediumDescription",
+    "longDescription",
+    "media",
+    "categories",
+    "castCredit",
+    "tags",
+    "published",
+    "links",
+    "contentRating",
+    "episodeNumber",
+    "episodeType",
+    "datePublished",
+    "secondaryEpisodeNumber",
+    "supplementaryAiring",
+    "promoKicker",
+    "promoTitle",
+    "promoDescription",
+    "productionNumber",
+    "program"
+  ]
+}

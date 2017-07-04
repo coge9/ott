@@ -1,0 +1,8 @@
+var nodes = arguments[0].childNodes;
+var text = '';
+for (var i = 0; i < nodes.length; i++) {
+    if (nodes[i].nodeType == Node.TEXT_NODE) {
+        text += nodes[i].textContent;
+    }
+}
+return text;

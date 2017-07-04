@@ -1,0 +1,208 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "description": "The unique identifier of the series."
+    },
+    "slug": {
+      "type": "string",
+      "description": "The machine-name \"slug\" of the series to use in its canonical URL."
+    },
+    "itemType": {
+      "type": "string",
+      "description": "The type of object.  In this case, a series."
+    },
+    "revision": {
+      "type": "number",
+      "description": "The revision number of the object.  This is used for version management."
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the series."
+    },
+    "subhead": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The subheading of the series."
+    },
+    "shortDescription": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The short description of the series."
+    },
+    "mediumDescription": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The medium description of the series."
+    },
+    "longDescription": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The long desciption of the series."
+    },
+    "showColor": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "This field is needed for Android. It will have a hex value as \"#000000\"."
+    },
+    "media": {
+      "type": "array",
+      "description": "A list of media objects associated to the series (can be images or videos)."
+    },
+    "categories": {
+      "type": "array",
+      "description": "A list of Categories taxonomyTerm UUIDs that is associated with this series."
+    },
+    "tags": {
+      "type": "array",
+      "description": "A list of the Tags taxonomyTerm UUIDs that is associated with this series."
+    },
+    "published": {
+      "type": "boolean",
+      "description": "A boolean field that identifies whether the series has been published."
+    },
+    "links": {
+      "type": "array",
+      "description": "A List of objects containing URL and text title of link associated to the series."
+    },
+    "genre": {
+      "type": "array",
+      "description": "A list of genre that is associated with this series."
+    },
+    "contentRating": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The content rating of this series."
+    },
+    "unscripted": {
+      "type": "boolean",
+      "description": "A boolean field that identifies whether the series is unscripted."
+    },
+    "syndicated": {
+      "type": "boolean",
+      "description": "A boolean field that identifies whether the series is syndicated."
+    },
+    "seriesType": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "This identifies whether the series is a web-series or a TV series."
+    },
+    "relatedSeries": {
+      "type": "array",
+      "description": "A list UUIDs of other series related to this series."
+    },
+    "seriesEpisodeLength": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "description": "The standard series episode length in minutes."
+    },
+    "daypart": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "This identifies the programming timeframe of the series.  It can be Daytime, Primetime, or Late night."
+    },
+    "programStatus": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "This identifies the status of the series.  It can be Upcoming, In-seasons, Off-Season, Archived, Current, or Classic."
+    },
+    "currentSeason": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The Unique identifier of the most current season."
+    },
+    "collection": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The Unique identifier of series collection."
+    },
+    "sortTitle": {
+      "type": "string",
+      "description": "The SORT-friendly title of the series."
+    },
+    "mpxMetadata": {
+      "type": "object",
+      "properties": {
+        "mpxGuid": {
+          "type": "string",
+          "description": "The  mpxGuid of the series."
+        }
+      }
+    },
+    "promoKicker": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "promoTitle": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "promoDescription": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "slug",
+    "itemType",
+    "revision",
+    "title",
+    "subhead",
+    "shortDescription",
+    "mediumDescription",
+    "longDescription",
+    "media",
+    "categories",
+    "tags",
+    "published",
+    "links",
+    "genre",
+    "contentRating",
+    "unscripted",
+    "syndicated",
+    "seriesType",
+    "relatedSeries",
+    "seriesEpisodeLength",
+    "daypart",
+    "programStatus",
+    "currentSeason",
+    "collection",
+    "sortTitle",
+    "promoKicker",
+    "promoTitle",
+    "promoDescription"
+  ]
+}

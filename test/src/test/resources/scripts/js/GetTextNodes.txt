@@ -1,0 +1,12 @@
+var nodes = arguments[0].childNodes;
+var text = "";
+var items =[];
+var j=0;
+for (var i = 0; i < nodes.length; i++) {
+    if (nodes[i].nodeType == Node.TEXT_NODE) {
+        text = nodes[i].textContent;
+        items[j]=text;
+        j++;
+    }
+}
+return items;

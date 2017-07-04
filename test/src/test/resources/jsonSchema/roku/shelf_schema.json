@@ -1,0 +1,72 @@
+{
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "id": {
+      "id": "http://jsonschema.net/id",
+      "type": "string"
+    },
+    "moduleType": {
+      "id": "http://jsonschema.net/moduleType",
+      "type": "string"
+    },
+    "properties": {
+      "id": "http://jsonschema.net/properties",
+      "type": "object",
+      "properties": {
+        "ShowRowLabel": {
+          "id": "http://jsonschema.net/properties/ShowRowLabel",
+          "type": "string"
+        },
+        "ShowDescription": {
+          "id": "http://jsonschema.net/properties/ShowDescription",
+          "type": "string"
+        },
+        "ShowRowCounter": {
+          "id": "http://jsonschema.net/properties/ShowRowCounter",
+          "type": "string"
+        }
+      }
+    },
+    "itemCount": {
+      "id": "http://jsonschema.net/itemCount",
+      "type": "integer"
+    },
+    "tileType": {
+      "id": "http://jsonschema.net/tileType",
+      "type": "integer"
+    },
+    "title": {
+      "id": "http://jsonschema.net/title",
+      "type": "string"
+    },
+    "listId": {
+      "id": "http://jsonschema.net/listId",
+      "type": "string"
+    },
+    "dateModified": {
+      "id": "http://jsonschema.net/dateModified",
+      "type": "string"
+    },
+    "datePublished": {
+      "id": "http://jsonschema.net/datePublished",
+      "type": "string"
+    },
+    "dateCreated": {
+      "id": "http://jsonschema.net/dateCreated",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "moduleType",
+    "properties",
+    "itemCount",
+    "tileType",
+    "title",
+    "listId",
+    "dateModified",
+    "datePublished",
+    "dateCreated"
+  ]
+}
